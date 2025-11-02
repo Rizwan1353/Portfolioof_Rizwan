@@ -1,0 +1,210 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #eaf6fa;
+  color: #08213c;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 60px;
+  background-color: transparent;
+}
+
+.logo {
+  font-family: "Momo Signature", cursive;
+  font-weight: 400;
+  font-size: 30px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #08213c;
+  font-weight: 500;
+}
+
+.navbar a:hover {
+  color: #2563eb;
+}
+
+/* Education Section */
+.education {
+  background-color: #f0f8ff;
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+.education .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+/* Floating Image */
+.education-left img {
+  width: 600px;
+  height: auto;
+  animation: floatHat 4s ease-in-out infinite;
+}
+
+@keyframes floatHat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+}
+
+.education-right {
+  text-align: center;
+  max-width: 600px;
+}
+
+.education-right h2 {
+  font-size: 3.5rem;
+  color: #002e5b;
+  margin-bottom: 10px;
+}
+
+.education-right h3 {
+  font-size: 2rem;
+  color: #002e5b;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.edu-subtitle {
+  font-size: 20px;
+}
+
+.edu-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.edu-icons img {
+  width: 60px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.edu-icons img:hover {
+  transform: scale(1.15);
+}
+
+/* 🔹 Scroll Reveal Animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(80px);
+  transition: all 1s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Certifications Section */
+.certifications {
+  background-color: #eaf6fb; /* match site tone */
+  padding: 80px 0;
+  text-align: center;
+}
+
+.certifications h2 {
+  font-size: 2.8rem;
+  color: #002e5b;
+  margin-bottom: 50px;
+  font-weight: 700;
+}
+
+.certifications .section-title {
+  font-size: 2.2rem;
+  color: #06283D;
+  margin-bottom: 40px;
+}
+.cert-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  gap: 20px; /* 🔹 smaller gap */
+  justify-items: center;
+  padding: 0 60px;
+}
+
+
+.cert-card {
+  background: #eaf6fa;
+  width: 100%;
+  max-width: 350px; /* 🔹 wider landscape look */
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.cert-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+
+.cert-card img {
+  width: 100%;
+  height: 250px; /* fixed height */
+  object-fit: contain; /* keeps logo fully visible */
+  background-color: #fff; /* adds clean background behind logos */
+  padding: 10px;
+  display: block;
+  border-bottom: 1px solid #dbeafe;
+}
+
+.cert-info {
+  padding: 15px;
+  background: #f9fdff;
+}
+
+.cert-info h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #08213c;
+}
+
+.cert-info p {
+  color: #6b7280;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+@media (max-width: 992px) {
+  .cert-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .cert-container {
+    grid-template-columns: 1fr;
+  }
+}

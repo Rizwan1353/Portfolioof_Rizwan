@@ -1,0 +1,235 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #eaf6fa;
+  color: #08213c;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 60px;
+  background-color: transparent;
+}
+
+.logo {
+  font-family: "Momo Signature", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #08213c;
+  font-weight: 500;
+}
+
+.navbar a:hover {
+  color: #2563eb;
+}
+
+/* Home Section */
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 100px;
+  flex-wrap: wrap;
+}
+
+.content {
+  max-width: 600px;
+}
+
+.content h1 {
+  font-size: 60px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.username {
+  font-size: 25px;
+  margin-bottom: 20px;
+  font-weight: 700;
+
+}
+
+.description {
+  color: #4b5563;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+/* Social icons */
+.socials img {
+  width: 35px;
+  margin-right: 15px;
+  transition: transform 0.2s ease;
+}
+
+.socials img:hover {
+  transform: scale(1.1);
+}
+
+/* GitHub Button */
+.github-btn {
+  display: inline-block;
+  background-color: #08213c;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.github-btn:hover {
+  background-color: #2563eb;
+}
+
+/* Illustration */
+.illustration img {
+  max-width: 1000px;
+  height: 500px;
+  
+  border-radius: 10px;
+}
+
+@media (max-width: 900px) {
+  .home {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .illustration img {
+    margin-top: 40px;
+    height: 5000px;
+    width: 5000px;
+  }
+}
+
+/* next section Style */
+
+.what-i-do {
+  background-color: #eaf4fb;
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+.what-i-do .section-title {
+  text-align: center;
+  font-size: 3.0rem;
+  font-weight: 700;
+  color: #002244;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.what-i-do .section-title::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 5px;
+  background-color: #2563eb;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.what-i-do .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 60px;
+}
+
+.what-i-do .text {
+  flex: 1 1 45%;
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 1.5s ease;
+}
+
+.what-i-do .text.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.what-i-do .text h3 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #003366;
+}   
+
+.what-i-do .icons img {
+  width: 45px;
+  margin-right: 10px;
+}
+
+.what-i-do .text ul {
+  list-style: none;
+  padding: 0;
+}
+
+.what-i-do .text li {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.what-i-do .image {
+  flex: 1 1 45%;
+  text-align: center;
+  opacity: 0;
+  transform: translateX(100px);
+  transition: all 1.5s ease;
+}
+
+.what-i-do .image.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.what-i-do .image img {
+  max-width: 100%;
+  border-radius: 10px;
+  /* box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); */
+}
+
+/* home enimation */
+/* Home Section Scroll Animation */
+.home-text,
+.home-image {
+  opacity: 0;
+  transform: translateY(80px);
+  transition: all 1.2s ease;
+}
+
+.home-text.show,
+.home-image.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.h4size{
+  font-size: 50px;
+}
